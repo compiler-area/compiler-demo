@@ -1,0 +1,42 @@
+*{
+  transition: 1s all ease-in-out;
+}
+
+.navbar-light .navbar-brand{
+  color: #00f
+}
+
+.navbar-brand .c{
+  color: #f00;
+  font-size: 30px
+}
+
+.nav-trans{
+  background: #f8f9fa00 ;
+  padding: 30px
+}
+
+/*
+.firstRow{
+    margin-top: 90px
+} */
+
+.im {
+  overflow: hidden;
+}
+
+.leader{
+  /* padding: 2rem; */
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.leader:hover{
+  /* padding: .25rem; */
+  padding: 2rem;
+
+}
