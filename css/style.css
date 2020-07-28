@@ -49,6 +49,9 @@
   padding: 30px
 }
 
+.navbar-light .navbar-nav .nav-link{
+  color: var(--myprimeColorblack);
+}
 /* body{
   background: var(--myprimeColorblack)
 }
@@ -98,6 +101,16 @@
 .fa-x{
   width: 50px;
   background-color: var(--myprimeColor);
+}
+
+.myprime{
+  border: 1px solid var(--myprimeColor);
+  transition: .3s all ease-in-out;
+}
+
+.myprime:hover{
+  background-color: var(--myprimeColor);
+  color: white;
 }
 
 .social-links{
