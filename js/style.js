@@ -20,7 +20,7 @@ $(document).ready(function() {
       .eq(1).css("background","rgb(235, 69, 89)").end()
       .eq(2).css("background","rgb(32, 64, 81)").end()
       .eq(3).css("background","rgb(114, 27, 101)").end()
-      .eq(4).css("background","rgb(255, 164, 27)").end()
+      .eq(4).css("background","rgb(255, 164, 27)").end();
       // .eq(5).css("background","#000");
 
       $(".color-option ul li").click(function()
@@ -52,7 +52,7 @@ $(document).ready(function() {
             '--myprimeColorblack': "#b80d57",
             '--primeFontColor' : "#c69eab"
           });
-        } else if( $(this).data("background-color") == "rgb(255, 164, 27)" ){
+        } else if( $(this).css("background-color") == "rgb(255, 164, 27)" ){
           $(':root').css({
             '--myprimeColor': $(this).css("background-color") ,
             '--myprimeColorblack': "#be7d1c",
