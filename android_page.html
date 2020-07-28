@@ -45,209 +45,351 @@
     <link href="css/product.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="site-header sticky-top py-1">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2" href="#" aria-label="Product">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-    </a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
-  </div>
-</nav>
+    <!-- ***************************************** old nav ***************************************** -->
+        <!-- <nav class="site-header sticky-top py-1">
+          <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="#" aria-label="Product">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+          </div>
+        </nav> -->
+    <!-- ***************************************** old nav ***************************************** -->
 
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-  <div class="col-md-5 p-lg-5 mx-auto my-5">
-    <h1 class="display-4 font-weight-normal">Mobile Applications</h1>
-    <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-    <a class="btn btn-outline-secondary" href="#">Coming soon</a>
-  </div>
-  <div class="product-device shadow-sm d-none d-md-block"></div>
-  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-</div>
+    <!-- *************************************** new nav bar **************************************** -->
 
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-    <div class="my-3 py-3">
-      <h2 class="display-5">Another headline</h2>
-      <p class="lead">And an even wittier subheading.</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-danger">view Demo</button>
-        <button type="button" class="btn btn-success">Download</button>
-      </div>
-      <!-- mini carosel -->
-      <div class="carosel" id="carosel1">
-        <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
-        <div class="carosel-inner">
-          <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
-          <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
-          <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
-          <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
-          <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
-          <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+    <header>
+      <!-- start Nav bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark text-white">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><span class="c">c</span>ompiler</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="album.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  album
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/Compiler-108691070922226"> <i class="fab fa-facebook"></i> contact us</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-user-friends"></i> team sections
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="android_page.html">web design</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="android_page.html">Graphic Design</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="android_page.html">windows application</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="android_page.html">android application</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item disabled" href="android_page.html" tabindex="-1" aria-disabled="true">Ebmeded system</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
-      </div>
-      <!-- mini carosel -->
+      </nav>
+      <!-- end navbar -->
+    </header>
+    <!-- *************************************** new nav bar **************************************** -->
 
-    </div>
-    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Another headline</h2>
-      <p class="lead">And an even wittier subheading.</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">view Demo</button>
-        <button type="button" class="btn btn-secondary">Download</button>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Mobile Applications</h1>
+        <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
+        <a class="btn btn-outline-secondary" href="#">Coming soon</a>
       </div>
-      <!-- mini carosel -->
-      <div class="carosel" id="carosel1">
-        <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
-        <div class="carosel-inner">
-          <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
-          <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
-          <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
-          <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
-          <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
-          <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+      <div class="product-device shadow-sm d-none d-lg-block"></div>
+      <div class="product-device product-device-2 shadow-sm d-none d-lg-block"></div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h3 class="display-5">Another headline</h3>
+          <p class="lead">And an even wittier subheading.</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">view Demo</button>
+            <button type="button" class="btn btn-secondary">Download</button>
+          </div>
+          <!-- mini carosel -->
+          <div class="carosel" id="carosel1">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+              <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+              <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+              <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+              <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+              <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+            </div>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+          </div>
+          <!-- mini carosel -->
+
         </div>
-        <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+        <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
       </div>
-      <!-- mini carosel -->
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h3 class="display-5">Another headline</h3>
+          <p class="lead">And an even wittier subheading.</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">view Demo</button>
+            <button type="button" class="btn btn-secondary">Download</button>
+          </div>
+          <!-- mini carosel -->
+          <div class="carosel" id="carosel1">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+              <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+              <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+              <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+              <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+              <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+            </div>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+          </div>
+          <!-- mini carosel -->
+        </div>
+        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
     </div>
-    <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-</div>
 
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Another headline</h2>
-      <p class="lead">And an even wittier subheading.</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">view Demo</button>
-        <button type="button" class="btn btn-secondary">Download</button>
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h3 class="display-5">Another headline</h3>
+          <p class="lead">And an even wittier subheading.</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">view Demo</button>
+            <button type="button" class="btn btn-secondary">Download</button>
+          </div>
+          <!-- mini carosel -->
+          <div class="carosel" id="carosel1">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+              <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+              <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+              <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+              <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+              <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+            </div>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+          </div>
+          <!-- mini carosel -->
+        </div>
+        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h3 class="display-5">Another headline</h3>
+          <p class="lead">And an even wittier subheading.</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">view Demo</button>
+            <button type="button" class="btn btn-secondary">Download</button>
+          </div>
+          <!-- mini carosel -->
+          <div class="carosel" id="carosel1">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+              <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+              <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+              <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+              <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+              <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+            </div>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+          </div>
+          <!-- mini carosel -->
+        </div>
+        <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
       </div>
     </div>
-    <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-  <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-    <div class="my-3 py-3">
-      <h2 class="display-5">Another headline</h2>
-      <p class="lead">And an even wittier subheading.</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">view Demo</button>
-        <button type="button" class="btn btn-secondary">Download</button>
-      </div>
-    </div>
-    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-</div>
 
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Another headline</h2>
-      <p class="lead">And an even wittier subheading.</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">view Demo</button>
-        <button type="button" class="btn btn-secondary">Download</button>
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h3 class="display-5">Another headline</h3>
+          <p class="lead">And an even wittier subheading.</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">view Demo</button>
+            <button type="button" class="btn btn-secondary">Download</button>
+          </div>
+          <!-- mini carosel -->
+          <div class="carosel" id="carosel1">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+              <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+              <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+              <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+              <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+              <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+            </div>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+          </div>
+          <!-- mini carosel -->
+        </div>
+        <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h3 class="display-5">Another headline</h3>
+          <p class="lead">And an even wittier subheading.</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">view Demo</button>
+            <button type="button" class="btn btn-secondary">Download</button>
+          </div>
+          <!-- mini carosel -->
+          <div class="carosel" id="carosel1">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+              <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+              <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+              <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+              <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+              <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+            </div>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+          </div>
+          <!-- mini carosel -->
+        </div>
+        <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
       </div>
     </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 py-3">
-      <h2 class="display-5">Another headline</h2>
-      <p class="lead">And an even wittier subheading.</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">view Demo</button>
-        <button type="button" class="btn btn-secondary">Download</button>
-      </div>
-    </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-</div>
 
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Another headline</h2>
-      <p class="lead">And an even wittier subheading.</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">view Demo</button>
-        <button type="button" class="btn btn-secondary">Download</button>
-      </div>
-    </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 py-3">
-      <h2 class="display-5">Another headline</h2>
-      <p class="lead">And an even wittier subheading.</p>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-danger">view Demo</button>
-        <button type="button" class="btn btn-success">Download</button>
-      </div>
-    </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-</div>
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
 
-<footer class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-      <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h3 class="display-5">Another headline</h3>
+          <p class="lead">And an even wittier subheading.</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">view Demo</button>
+            <button type="button" class="btn btn-secondary">Download</button>
+          </div>
+          <!-- mini carosel -->
+          <div class="carosel" id="carosel1">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+              <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+              <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+              <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+              <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+              <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+            </div>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+          </div>
+          <!-- mini carosel -->
+        </div>
+        <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h3 class="display-5">Another headline</h3>
+          <p class="lead">And an even wittier subheading.</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">view Demo</button>
+            <button type="button" class="btn btn-secondary">Download</button>
+          </div>
+          <!-- mini carosel -->
+          <div class="carosel" id="carosel1">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+              <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+              <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+              <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+              <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+              <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+            </div>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+          </div>
+          <!-- mini carosel -->
+        </div>
+        <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+
     </div>
-    <div class="col-6 col-md">
-      <h5>Features</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Cool stuff</a></li>
-        <li><a class="text-muted" href="#">Random feature</a></li>
-        <li><a class="text-muted" href="#">Team feature</a></li>
-        <li><a class="text-muted" href="#">Stuff for developers</a></li>
-        <li><a class="text-muted" href="#">Another one</a></li>
-        <li><a class="text-muted" href="#">Last time</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Resources</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Resource</a></li>
-        <li><a class="text-muted" href="#">Resource name</a></li>
-        <li><a class="text-muted" href="#">Another resource</a></li>
-        <li><a class="text-muted" href="#">Final resource</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Resources</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Business</a></li>
-        <li><a class="text-muted" href="#">Education</a></li>
-        <li><a class="text-muted" href="#">Government</a></li>
-        <li><a class="text-muted" href="#">Gaming</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>About</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Team</a></li>
-        <li><a class="text-muted" href="#">Locations</a></li>
-        <li><a class="text-muted" href="#">Privacy</a></li>
-        <li><a class="text-muted" href="#">Terms</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+          <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Cool stuff</a></li>
+            <li><a class="text-muted" href="#">Random feature</a></li>
+            <li><a class="text-muted" href="#">Team feature</a></li>
+            <li><a class="text-muted" href="#">Stuff for developers</a></li>
+            <li><a class="text-muted" href="#">Another one</a></li>
+            <li><a class="text-muted" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Resource</a></li>
+            <li><a class="text-muted" href="#">Resource name</a></li>
+            <li><a class="text-muted" href="#">Another resource</a></li>
+            <li><a class="text-muted" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Business</a></li>
+            <li><a class="text-muted" href="#">Education</a></li>
+            <li><a class="text-muted" href="#">Government</a></li>
+            <li><a class="text-muted" href="#">Gaming</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <!-- <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script> -->
       <script src="js/bootstrap.min.js"></script>
       <script src="js/style.js" charset="utf-8"></script>
-    </body>
+      <script src="js/all.min.js" charset="utf-8"></script>
+      <script defer src="js/brands.js"></script>
+      <script defer src="js/solid.js"></script>
+      <script defer src="js/fontawesome.js"></script>    </body>
 </html>

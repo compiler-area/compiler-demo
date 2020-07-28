@@ -1,13 +1,13 @@
 $(document).ready(function() {
    $(window).scroll(function(){
         if($(window).scrollTop() > $(window).height() / 2){
-            $(".navbar").css({"padding":"15px" , "box-shadow" : "3px 19px 102px 1px #000"});
-            $(".navbar").addClass("bg-white navbar-light").removeClass("nav-trans navbar-dark");
+            $(".main-nav").css({"padding":"15px" , "box-shadow" : "3px 19px 102px 1px #000"});
+            $(".main-nav").addClass("bg-white navbar-light").removeClass("nav-trans navbar-dark");
 
         }
         else{
-            $(".navbar").css({"padding":"30px" , "box-shadow" : "none"});
-            $(".navbar").removeClass("bg-white navbar-light").addClass("nav-trans navbar-dark");
+            $(".main-nav").css({"padding":"30px" , "box-shadow" : "none"});
+            $(".main-nav").removeClass("bg-white navbar-light").addClass("nav-trans navbar-dark");
         }
     });
 
