@@ -31,32 +31,37 @@ $(document).ready(function() {
         if( $(this).css("background-color") == "rgb(0, 189, 170)" ){
           $(':root').css({
             '--myprimeColor': $(this).css("background-color") ,
-            '--myprimeColorblack': "rgb(64, 0, 130)",
-            '--primeFontColor' : '#df154f'
+            '--myprimeColorblack': "rgb(244, 0, 235)",
+            '--primeFontColor' : '#df154f',
+            '--myThemetranspalent' : "rgb(0, 189, 170 , .5)"
           });
         } else if( $(this).css("background-color") == "rgb(235, 69, 89)" ){
           $(':root').css({
             '--myprimeColor': $(this).css("background-color") ,
             '--myprimeColorblack': "#f78259" ,
-            '--primeFontColor' : '#aeefec'
+            '--primeFontColor' : 'rgb(65, 106, 255)',
+            '--myThemetranspalent' : "rgb(235, 69, 89 , .5)"
           });
         } else if( $(this).css("background-color") == "rgb(255, 0, 0)" ){
           $(':root').css({
             '--myprimeColor': $(this).css("background-color") ,
             '--myprimeColorblack': "rgb(191,6,6)",
-            '--primeFontColor' : "rgb(158,12,12)"
+            '--primeFontColor' : "rgb(0,0,0)",
+            '--myThemetranspalent' :  "rgb(255, 0, 0,.5)"
           });
         } else if( $(this).css("background-color") == "rgb(0, 0, 170)" ){
           $(':root').css({
             '--myprimeColor': $(this).css("background-color") ,
             '--myprimeColorblack': "rgb(6,6,115)",
-            '--primeFontColor' : "rgb(33,33,79)"
+            '--primeFontColor' : "rgb(255,33,79)",
+            '--myThemetranspalent' : "rgb(0, 0, 170,.5)"
           });
         } else if( $(this).css("background-color") == "rgb(0, 170, 68)" ){
           $(':root').css({
             '--myprimeColor': $(this).css("background-color") ,
             '--myprimeColorblack': "rgb(6, 126, 54)",
-            '--primeFontColor' : "rgb(5,56,26)"
+            '--primeFontColor' : "rgb(5,56,26)",
+            '--myThemetranspalent' : "rgb(0, 170, 68,.5)"
           });
         } else if( $(this).data("value") == "black" ){
           $(':root').css('--myprimeColor', (color = ["rgb(0, 189, 170)", "rgb(235, 69, 89)", "rgb(32, 64, 81)", "rgb(114, 27, 101)", "rgb(255, 164, 27)"])[Math.floor(Math.random() * color.length)]);
@@ -179,6 +184,33 @@ $(document).ready(function() {
     });
     // ================================== counter ==================================
 
+    $('#scroll-to-top').click(function () {
+      //scroll back up
+      $('html').animate({scrollTop:0}, 1500);
+    });
+    $('.scroll-to-down').click(function () {
+      //scroll to see more
+      $('html').animate({scrollTop:$('.carousel-inner').height()-$('nav').height()}, '500');
+    });
+
+    // ================================== owlcarousel ==================================
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            // 600:{
+            //     items:2
+            // },
+            // // 1000:{
+            // //     items:7
+            // // }
+        }
+    })
+
 });
 
 // ****************************** function to darken the colors so imporstant ******************************
@@ -213,3 +245,16 @@ $(document).ready(function() {
 //         b: parseInt(result[3], 16)
 //     } : null;
 // }
+
+// ******************************** scroll up and down ********************************
+// $(document).ready(function() {
+//     // scroll down
+//     $("html, body").animate({
+//         scrollTop: $(document).height()
+//     }, 9000);
+//
+//     //scroll back up
+//     $("html, body").animate({
+//         scrollTop: 0
+//     }, 9000);
+// });

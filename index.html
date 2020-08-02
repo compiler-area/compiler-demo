@@ -12,6 +12,8 @@
       <link rel="icon" href="images/logos/compiler.jpg">
     <!-- <link rel="icon" href="https://i.ibb.co/fXSS6Ys/compiler.jpg"> -->
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <!--owlcarousel-->
+    <link rel="stylesheet" href="css/owl.carousel.css">
 
     <!-- Bootstrap CSS , fontawesome & animate -->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -21,8 +23,7 @@
     <link href="css/brands.css" rel="stylesheet">
     <link href="css/solid.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- myStyle -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -42,8 +43,11 @@
     </style>
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
+    <!-- myStyle -->
+    <link rel="stylesheet" href="css/style.css">
+
   </head>
-  <body>
+  <body class="pb-0">
     <header>
       <!-- start Nav bar -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-trans main-nav">
@@ -64,9 +68,10 @@
                 <a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="album.html">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                  album
+                <a class="nav-link" href="album.html" data-toggle="modal" data-target="#modalLRForm">
+                  <!-- <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm"> LogIn/Register</a> -->
+                  <i class="fas fa-user ml-1"></i>
+                  Register / Sign in
                 </a>
               </li>
               <li class="nav-item">
@@ -97,7 +102,7 @@
 
     <main role="main">
 
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div id="myCarousel" class="carousel slide mb-0" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -112,7 +117,7 @@
               <div class="carousel-caption text-center">
                 <h1>Web Design.</h1>
                 <p>Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development rather than software development.</p>
-                <p><a class="btn btn-lg myprime" href="#" role="button">Sign up today</a></p>
+                <p><a class="btn btn-lg myprime scroll-to-down" role="button">see more</a></p>
               </div>
             </div>
           </div>
@@ -123,7 +128,7 @@
               <div class="carousel-caption text-center">
                 <h1>Graphic Design.</h1>
                 <p>Graphic design is a craft where professionals create visual content to communicate messages. By applying visual hierarchy and page layout techniques, designers use typography and pictures to meet users’ specific needs and focus on the logic of displaying elements in interactive designs, to optimize the user experience.</p>
-                <p><a class="btn btn-lg myprime" href="#" role="button">Learn more</a></p>
+                <p><a class="btn btn-lg myprime scroll-to-down" role="button">see more</a></p>
               </div>
             </div>
           </div>
@@ -134,7 +139,7 @@
               <div class="carousel-caption text-center">
                 <h1>Windows application.</h1>
                 <p>Windows applicationA program that is written to run under the Microsoft Windows operating system, also called a "Windows app." All 32-bit Windows applications run in the 32-bit and 64-bit versions of Windows. All 64-bit applications require 64-bit Windows, which is the standard on new Windows computers and tablets.</p>
-                <p><a class="btn btn-lg myprime" href="#" role="button">Browse gallery</a></p>
+                <p><a class="btn btn-lg myprime scroll-to-down" role="button">see more</a></p>
               </div>
             </div>
           </div>
@@ -145,7 +150,7 @@
               <div class="carousel-caption text-center">
                 <h1>Android applications</h1>
                 <p>An Android app is a software application running on the Android platform. Because the Android platform is built for mobile devices, a typical Android app is designed for a smartphone or a tablet PC running on the Android OS.</p>
-                <p><a class="btn btn-lg myprime" href="#" role="button">Browse gallery</a></p>
+                <p><a class="btn btn-lg myprime scroll-to-down" role="button">see more</a></p>
               </div>
             </div>
           </div>
@@ -160,6 +165,168 @@
         </a>
       </div>
 
+      <!-- ================================= MODAL =================================  -->
+
+      <!--Modal: Login / Register Form-->
+      <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+          <!--Content-->
+          <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+                    Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+                    Register</a>
+                </li>
+              </ul>
+
+              <!-- Tab panels -->
+              <div class="tab-content">
+                <!--Panel 7-->
+                <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                  <!--Body-->
+                  <div class="modal-body mb-1">
+                    <div class="md-form form-sm mb-5">
+                      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="Usersign" placeholder="Username">
+                      </div>
+                    </div>
+
+                    <div class="md-form form-sm mb-4">
+                      <label class="sr-only" for="inlineFormInputGroup">password</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-lock prefix"></i></div>
+                        </div>
+                        <input type="password" class="form-control" id="userpass" placeholder="password">
+                      </div>
+                    </div>
+                    <div class="text-center mt-2">
+                      <button class="btn btn-info">Log in <i class="fas fa-sign-in-alt ml-1"></i></button>
+                    </div>
+                  </div>
+                  <!--Footer-->
+                  <div class="modal-footer">
+                    <div class="options text-center text-md-right mt-1">
+                      <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                      <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                    </div>
+                    <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+                <!--/.Panel 7-->
+
+                <!--Panel 8-->
+                <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                  <!--Body-->
+                  <div class="modal-body">
+                    <div class="md-form form-sm mb-5">
+                      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="userreg" placeholder="Username">
+                      </div>
+                    </div>
+
+                    <div class="md-form form-sm mb-5">
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-lock prefix"></i></div>
+                        </div>
+                        <input type="password" class="form-control" id="passrepeat1" placeholder="password">
+                      </div>
+                    </div>
+
+                    <div class="md-form form-sm mb-4">
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-lock prefix"></i></div>
+                        </div>
+                        <input type="password" class="form-control" id="passrepeat2" placeholder="Repeat password">
+                      </div>
+                    </div>
+
+                    <div class="text-center form-sm mt-2">
+                      <button class="btn btn-info">Sign up <i class="fas fa-sign-in-alt ml-1"></i></button>
+                    </div>
+
+                  </div>
+                  <!--Footer-->
+                  <div class="modal-footer">
+                    <div class="options text-right">
+                      <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                    </div>
+                    <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!--/.Panel 8-->
+              </div>
+
+            </div>
+          </div>
+          <!--/.Content-->
+        </div>
+      </div>
+      <!--Modal: Login / Register Form-->
+
+      <!-- <div class="text-center">
+        <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Launch
+          Modal LogIn/Register</a>
+      </div> -->
+
+      <!-- ================================= MODAL =================================  -->
+
+      <!-- ================================= counter ================================= -->
+      <div class="count-div m-0">
+        <div class="container">
+          <h1 class="text-center w-100 text-white">Hello compiler visitors</h1>
+          <h3 class="text-center w-100 text-white">here is some iformations about us</h3>
+
+          <div class=" row">
+              <div class="counter col-lg  mr-2 ml-2">
+                <i class="fa fa-user-cog fa-2x"></i>
+                <h2 class="timer count-title count-number" data-to="6" data-speed="3000"></h2>
+                 <p class="count-text ">leaders of team</p>
+              </div>
+
+              <div class="counter col-lg  mr-2 ml-2">
+                <i class="fa fa-users fa-2x"></i>
+                <h2 class="timer count-title count-number" data-to="70" data-speed="3000"></h2>
+                <p class="count-text ">team members</p>
+              </div>
+
+              <div class="counter col-lg mr-2 ml-2">
+                <i class="fa fa-tasks fa-2x"></i>
+                <h2 class="timer count-title count-number" data-to="90" data-speed="3000"></h2>
+                <p class="count-text ">our projects</p>
+              </div>
+
+              <!-- <div class="counter col_fourth end">
+                <i class="fa fa-bug fa-2x"></i>
+                <h2 class="timer count-title count-number" data-to="157" data-speed="3000"></h2>
+                <p class="count-text ">SomeText GoesHere</p>
+              </div> -->
+        </div>
+        </div>
+      </div>
+      <!-- ================================= counter ================================= -->
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
@@ -186,39 +353,6 @@
             <!-- <img src="images/logos/compile.jpg" class=" fa-x" data-toggle="collapse" data-target="#colorbox"> -->
         </section>
 
-
-        <!-- ================================= counter ================================= -->
-        <div class="row">
-          <h1 class="text-center w-100">JQUERY NUMBER ANIMATION</h1>
-          <h3 class="text-center w-100">jQuery counter to count up to a target number</h3>
-
-          <div class="wrapper">
-              <div class="counter col_fourth">
-                <i class="fa fa-code fa-2x"></i>
-                <h2 class="timer count-title count-number" data-to="300" data-speed="3000"></h2>
-                 <p class="count-text ">SomeText GoesHere</p>
-              </div>
-
-              <div class="counter col_fourth">
-                <i class="fa fa-coffee fa-2x"></i>
-                <h2 class="timer count-title count-number" data-to="1700" data-speed="3000"></h2>
-                <p class="count-text ">SomeText GoesHere</p>
-              </div>
-
-              <div class="counter col_fourth">
-                <i class="fa fa-lightbulb fa-2x"></i>
-                <h2 class="timer count-title count-number" data-to="11900" data-speed="3000"></h2>
-                <p class="count-text ">SomeText GoesHere</p>
-              </div>
-
-              <div class="counter col_fourth end">
-                <i class="fa fa-bug fa-2x"></i>
-                <h2 class="timer count-title count-number" data-to="157" data-speed="3000"></h2>
-                <p class="count-text ">SomeText GoesHere</p>
-              </div>
-          </div>
-        </div>
-        <!-- ================================= counter ================================= -->
 
 
         <!-- START THE FEATURETTES -->
@@ -255,8 +389,23 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Windows Application <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Windows applicationA program that is written to run under the Microsoft Windows operating system, also called a "Windows app." All 32-bit Windows applications run in the 32-bit and 64-bit versions of Windows. All 64-bit applications require 64-bit Windows, which is the standard on new Windows computers and tablets.</p>
+            <h2 class="featurette-heading">Windows Application  <span class="badge badge-secondary">New</span></h2>
+            <p class="lead">See Our Last Task projects and keep in touch with us.</p>
+            <!-- mini carosel -->
+            <div class="carosel" id="carosel1">
+              <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+              <div class="carosel-inner">
+                <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+                <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+                <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+                <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+                <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+                <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+              </div>
+              <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+            </div>
+            <!-- mini carosel -->
+            <a class="btn myprime btn-lg btn-block" href="android_page.html" role="button">view all projects</a>
           </div>
           <div class="col-md-5 im">
             <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
@@ -268,8 +417,23 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Android Application <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">An Android app is a software application running on the Android platform. Because the Android platform is built for mobile devices, a typical Android app is designed for a smartphone or a tablet PC running on the Android OS.</p>
+            <h2 class="featurette-heading">Android Application  <span class="badge badge-secondary">New</span></h2>
+            <p class="lead">See Our Last Task projects and keep in touch with us.</p>
+            <!-- mini carosel -->
+            <div class="carosel" id="carosel1">
+              <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+              <div class="carosel-inner">
+                <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+                <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+                <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+                <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+                <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+                <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+              </div>
+              <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+            </div>
+            <!-- mini carosel -->
+            <a class="btn myprime btn-lg btn-block" href="android_page.html" role="button">view all projects</a>
           </div>
           <div class="col-md-5 order-md-1 im">
             <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
@@ -281,8 +445,23 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Graphic Design <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Graphic design is a craft where professionals create visual content to communicate messages. By applying visual hierarchy and page layout techniques, designers use typography and pictures to meet users’ specific needs and focus on the logic of displaying elements in interactive designs, to optimize the user experience.</p>
+            <h2 class="featurette-heading">Graphic Design  <span class="badge badge-secondary">New</span></h2>
+            <p class="lead">See Our Last Task projects and keep in touch with us.</p>
+            <!-- mini carosel -->
+            <div class="carosel" id="carosel1">
+              <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" ></a>
+              <div class="carosel-inner">
+                <img class="carosel-item" src="http://placehold.it/500/bbbbbb/fff&amp;text=1" />
+                <img class="carosel-item" src="http://placehold.it/500/CCCCCC&amp;text=2" />
+                <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+                <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+                <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+                <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+              </div>
+              <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" ></a>
+            </div>
+            <!-- mini carosel -->
+            <a class="btn myprime btn-lg btn-block" href="android_page.html" role="button">view all projects</a>
           </div>
           <div class="col-md-5 order-md-1 im">
             <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
@@ -295,106 +474,205 @@
 
         <!-- four columns of leaders of the team -->
         <!-- firstRow -->
-        <div class="row">
-          <div class="col">
-            <div class="col text-center">
-              <img src="images/team/dr.jpeg" class="rounded-circle " width="150" height="150" alt="web">
-              <h5>Compiler Team Leader</h5>
-              <p>Dr/Moahmmed Elsager</p>
-              <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+        <!-- <div class="featurette mb-5">
+          <div class="row">
+            <div class="col">
+              <div class="col text-center">
+                <img src="images/team/dr.jpeg" class="rounded-circle " width="150" height="150" alt="web">
+                <h5>Compiler Team Leader</h5>
+                <p>Dr/Moahmmed Elsager</p>
+                <ul class="social-links text-center">
+                  <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                  <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                  <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                  <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-lg text-center">
+              <img src="images/team/gemy.jpeg" class="rounded-circle " width="150" height="150" alt="web">
+              <h6>Windows application</h6>
+              <p>Mohammed gamal</p>
               <ul class="social-links text-center">
                 <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
                 <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
                 <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
                 <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
               </ul>
-            </div><!-- /.col-lg-4 -->
+            </div>
+
+            <div class="col-lg text-center">
+              <img src="images/team/amin.jpg" class="rounded-circle " width="150" height="150" alt="web">
+              <h6>Graphic design</h6>
+              <p>Moahmmed Amin</p>
+              <ul class="social-links text-center">
+                <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center">
+              <img src="images/team/bkr.jpeg" class="rounded-circle " width="150" height="150" alt="web">
+              <h6>Web design</h6>
+              <p>Ahmed AbuBakr</p>
+              <ul class="social-links text-center">
+                <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center">
+              <img src="images/team/khouty.png" class="rounded-circle " width="150" height="150" alt="web">
+              <h6>Android Application</h6>
+              <p>Mohammed El-khouty</p>
+              <ul class="social-links text-center">
+                <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center">
+              <img src="images/team/islam.jpeg" class="rounded-circle " width="150" height="150" alt="web">
+              <h6>Embedded system</h6>
+              <p>Islam Atef</p>
+              <ul class="social-links text-center">
+                <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+              </ul>
+            </div>
           </div>
-        </div><!-- /.row -->
-        <!-- secondRsow -->
-        <div class="row">
-          <div class="col-lg text-center">
-            <img src="images/team/gemy.jpeg" class="rounded-circle " width="150" height="150" alt="web">
-            <h6>Windows application</h6>
-            <p>Mohammed gamal</p>
-            <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
-            <ul class="social-links text-center">
-              <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
-            </ul>
-          </div><!-- /.col-lg-4 -->
+        </div> -->
+        <!-- /.featurette -->
+      </div>
+      <!-- /.container -->
 
-          <div class="col-lg text-center">
-            <img src="images/team/amin.jpg" class="rounded-circle " width="150" height="150" alt="web">
-            <h6>Graphic design</h6>
-            <p>Moahmmed Amin</p>
-            <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
-            <ul class="social-links text-center">
-              <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
-            </ul>
-          </div><!-- /.col-lg-4 -->
-
-          <div class="col-lg text-center">
-            <img src="images/team/bkr.jpeg" class="rounded-circle " width="150" height="150" alt="web">
-            <h6>Web design</h6>
-            <p>Ahmed AbuBakr</p>
-            <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
-            <ul class="social-links text-center">
-              <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
-            </ul>
-          </div><!-- /.col-lg-4 -->
-
-          <div class="col-lg text-center">
-            <img src="images/team/khouty.png" class="rounded-circle " width="150" height="150" alt="web">
-            <h6>Android Application</h6>
-            <p>Mohammed El-khouty</p>
-            <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
-            <ul class="social-links text-center">
-              <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
-            </ul>
-          </div><!-- /.col-lg-4 -->
-
-          <div class="col-lg text-center">
-            <img src="images/team/islam.jpeg" class="rounded-circle " width="150" height="150" alt="web">
-            <h6>Embedded system</h6>
-            <p>Islam Atef</p>
-            <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
-            <ul class="social-links text-center">
-              <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
-              <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
-            </ul>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-
+      <section class="work">
+          <div class="overley"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- Set up your HTML -->
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                      <div class="col-lg text-center  text-white">
+                        <img src="images/team/islam.jpeg" class="rounded-circle " width="150" height="150" alt="web">
+                        <h6>Embedded system</h6>
+                        <p>Islam Atef</p>
+                        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+                        <ul class="social-links text-center">
+                          <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+                        </ul>
+                      </div><!-- /.col-lg-4 -->
+                    </div>
+                    <div class="item">
+                      <div class="col-lg text-center text-white">
+                        <img src="images/team/khouty.png" class="rounded-circle " width="150" height="150" alt="web">
+                        <h6>Android Application</h6>
+                        <p>Mohammed El-khouty</p>
+                        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+                        <ul class="social-links text-center">
+                          <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+                        </ul>
+                      </div><!-- /.col-lg-4 -->
+                    </div>
+                    <div class="item">
+                      <div class="col-lg text-center text-white">
+                        <img src="images/team/bkr.jpeg" class="rounded-circle " width="150" height="150" alt="web">
+                        <h6>Web design</h6>
+                        <p>Ahmed AbuBakr</p>
+                        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+                        <ul class="social-links text-center">
+                          <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+                        </ul>
+                      </div><!-- /.col-lg-4 -->
+                    </div>
+                    <div class="item">
+                      <div class="col-lg text-center text-white">
+                        <img src="images/team/amin.jpg" class="rounded-circle " width="150" height="150" alt="web">
+                        <h6>Graphic design</h6>
+                        <p>Moahmmed Amin</p>
+                        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+                        <ul class="social-links text-center">
+                          <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+                        </ul>
+                      </div><!-- /.col-lg-4 -->
+                    </div>
+                    <div class="item">
+                      <div class="col-lg text-center text-white">
+                        <img src="images/team/gemy.jpeg" class="rounded-circle " width="150" height="150" alt="web">
+                        <h6>Windows application</h6>
+                        <p>Mohammed gamal</p>
+                        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+                        <ul class="social-links text-center">
+                          <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+                        </ul>
+                      </div><!-- /.col-lg-4 -->
+                    </div>
+                    <div class="item">
+                      <div class="col text-center text-white">
+                        <img src="images/team/dr.jpeg" class="rounded-circle " width="150" height="150" alt="web">
+                        <h5>Compiler Team Leader</h5>
+                        <p>Dr/Moahmmed Elsager</p>
+                        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+                        <ul class="social-links text-center">
+                          <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
+                        </ul>
+                      </div><!-- /.col-lg-4 -->
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
       <!-- FOOTER -->
-      <footer class="container text-center p-5 mt-5">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2020 Compiler, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <footer class="text-center bg-dark p-5 text-white mt-0">
+        <p class="float-right"><a id="scroll-to-top">Back to top</a></p>
+        <p class="mb-0">&copy; 2020 Compiler, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/style.js" charset="utf-8"></script>
     <script src="js/all.min.js" charset="utf-8"></script>
     <script defer src="js/brands.js"></script>
     <script defer src="js/solid.js"></script>
     <script defer src="js/fontawesome.js"></script>
+    <!--owlcarousel-->
+    <script src="js/owl.carousel.min.js"></script>
 
     </body>
 </html>

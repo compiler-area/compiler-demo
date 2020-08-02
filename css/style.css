@@ -1,5 +1,5 @@
 *{
-  transition: .5s all ease-in-out;
+  transition: .3s all ease-in-out;
 }
 
 /*
@@ -40,8 +40,10 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --myprimeColor : rgb(0, 189, 170);
   --myprimeColorblack : rgb(64, 0, 130) ;
-  --primeFontColor : #df154f;
+  --primeFontColor : rgb(244, 0, 235);
+  --myThemetranspalent : rgb(0, 189, 170 , .5);
 }
+
 .navbar-light .navbar-brand{
   color: var(--myprimeColorblack);
 }
@@ -73,6 +75,22 @@
   background: var(--myprimeColor)
 } */
 
+.featurette {
+  padding: 115px 10px;
+  background: #ddd;
+}
+
+.featurette-heading{
+  margin-top: 2rem;
+}
+
+.count-div {
+  background: var(--myprimeColor);
+  padding: 100px 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .option-box , .option-box-2{
   position: fixed;
   left:0;
@@ -87,7 +105,6 @@
   top:100px;
 }
 
-
 .option-box .color-option , .option-box-2 .color-option {
   background: #333;
   color:#fff;
@@ -95,7 +112,6 @@
   width:200px;
   border:4px solid var(--myprimeColor);
   float:left;
-
 }
 .option-box .color-option ul li , .option-box-2 .color-option ul li {
   width: 20px;
@@ -119,11 +135,12 @@
 .myprime{
   border: 1px solid var(--myprimeColor);
   transition: .3s all ease-in-out;
+  color: var(--primeFontColor) !important;
 }
 
 .myprime:hover{
   background-color: var(--myprimeColor);
-  color: white;
+  color: white !important;
 }
 
 .social-links{
@@ -132,13 +149,20 @@
   padding: 5px;
 }
 
-.social-links li{
+.social-links > li {
   display: inline-block;
-  color:  var(--myprimeColor);
+  color:  var(--primeFontColor);
+  transition: .1s all ease-in-out !important;
+
 }
 
-.social-links li a{
-  color:  var(--myprimeColor);
+.social-links > li > a > svg {
+  color:  var(--primeFontColor);
+  transition: .1s all ease-in-out !important;
+}
+
+.social-links > li > a:hover > svg {
+  color: gray;
 }
 
 /*
@@ -152,21 +176,28 @@
 
 .last_task{
   padding: 2rem;
-  /* padding: .25rem; */
+  /* padding: 0rem; */
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   /* max-width: 100%; */
   width: 100%;
-  height: 353px
+  height: 393px
 }
 
 .featurette:hover .last_task{
-  padding: .2rem;
+  padding: 0rem;
   /* padding: 2rem; */
-
+  /* transform: scale(1.1); */
 }
 
+.last_task:hover {
+  transform: scale(1.1);
+}
+
+#scroll-to-top{
+  cursor: pointer;
+}
 
 /* crosel */
 @media (max-width: 300px) {
@@ -257,9 +288,60 @@
 /* Column Grids End */
 
 .wrapper { width: 980px; margin: 30px auto; position: relative;}
-.counter { background-color: #ffffff; padding: 20px 0; border-radius: 5px;}
+.counter { background-color: #ffffff; padding: 20px 0; border-radius: 0px;}
 .count-title { font-size: 40px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
 .count-text { font-size: 13px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
-.fa-2x { margin: 0 auto; float: none; display: table; color: #4ad1e5; }
+.fa-2x { margin: 0 auto; float: none; display: table; color: var(--myprimeColor); }
 
 /* ============================================= counter ============================================= */
+
+.work {
+    min-height: 657.6px;
+    background: url(../images/car-imges/graphic.jpg);
+    height: auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.work .overley {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 120, 255, 0.7); */
+    background-color: var(--myThemetranspalent);
+    color: #FFF;
+}
+
+.owl-carousel .owl-item img{
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin-top: 120px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 18px;
+    height: 7px;
+    margin: 5px 5px;
+    background: #cde1f8;
+    border: 0px solid #cde1f8;
+    display: block;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+    outline: none
+}
+
+.owl-theme .owl-dot {
+  outline: none !important;
+}
+
+.work .owl-dots .owl-dot.active span {
+    background-color: #1B1B1B;
+    width: 25px;
+}
