@@ -82,11 +82,11 @@
                   <i class="fas fa-user-friends"></i> team sections
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="android_page.html">web design</a>
+                  <a class="dropdown-item" href="web_page.html">web design</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="android_page.html">Graphic Design</a>
+                  <a class="dropdown-item" href="graphic_page.html">Graphic Design</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="android_page.html">windows application</a>
+                  <a class="dropdown-item" href="windows_page.html">windows application</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="android_page.html">android application</a>
                   <div class="dropdown-divider"></div>
@@ -99,6 +99,164 @@
       </nav>
       <!-- end navbar -->
     </header>
+
+    <!-- ================================= MODAL =================================  -->
+
+    <!--Modal: Login / Register Form-->
+    <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+          <!--Modal cascading tabs-->
+          <div class="modal-c-tabs">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+                  Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+                  Register</a>
+              </li>
+            </ul>
+
+            <!-- Tab panels -->
+            <div class="tab-content">
+              <!--Panel 7-->
+              <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                <!--Body-->
+                <div class="modal-body mb-1">
+                  <div class="md-form form-sm mb-5">
+                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                      </div>
+                      <input type="text" class="form-control" id="Usersign" placeholder="Username">
+                    </div>
+                  </div>
+
+                  <div class="md-form form-sm mb-4">
+                    <label class="sr-only" for="inlineFormInputGroup">password</label>
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-lock prefix"></i></div>
+                      </div>
+                      <input type="password" class="form-control" id="userpass" placeholder="password">
+                    </div>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn myprime">Log in <i class="fas fa-sign-in-alt ml-1"></i></button>
+                  </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                  <div class="options text-center text-md-right mt-1">
+                    <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                    <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                  </div>
+                  <button type="button" class="btn myprime waves-effect ml-auto" data-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+              <!--/.Panel 7-->
+
+              <!--Panel 8-->
+              <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                <!--Body-->
+                <div class="modal-body">
+                  <div class="md-form form-sm mb-4">
+                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                      </div>
+                      <input type="text" class="form-control" id="userreg" placeholder="Username">
+                    </div>
+                  </div>
+
+                  <div class="md-form form-sm mb-4">
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-lock prefix"></i></div>
+                      </div>
+                      <input type="password" class="form-control" id="passrepeat1" placeholder="password">
+                    </div>
+                  </div>
+
+                  <div class="md-form form-sm mb-4">
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-lock prefix"></i></div>
+                      </div>
+                      <input type="password" class="form-control" id="passrepeat2" placeholder="Repeat password">
+                    </div>
+                  </div>
+
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+
+                  <div class="text-center form-sm mt-2">
+                    <button class="btn myprime ">Sign up <i class="fas fa-sign-in-alt ml-1"></i></button>
+                  </div>
+
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                  <div class="options text-right">
+                    <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                  </div>
+                  <button type="button" class="btn myprime waves-effect ml-auto" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              <!--/.Panel 8-->
+            </div>
+
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <!--Modal: Login / Register Form-->
+
+    <!-- <div class="text-center">
+      <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Launch
+        Modal LogIn/Register</a>
+    </div> -->
+
+    <!-- ===================================== MODAL =====================================  -->
+
+    <!-- ************************************* colors ************************************* -->
+
+    <section class="option-box">
+        <div class="color-option collapse" id="colorbox" style="height: 20px">
+            choose your theme
+          <ul class="list-unstyled">
+            <li style="background-color:rgb(0, 189, 170);" data-primeColor="rgb(0, 189, 170)" data-primeColorblack="rgb(244, 0, 235)" data-primefontcolor="rgb(80, 0, 77)" data-myThemetranspalent="rgb(0, 189, 170 , .5)" ></li>
+            <li style="background-color:rgb(235, 69, 89);" data-primeColor="rgb(235, 69, 89)" data-primeColorblack="#f78259" data-primefontcolor="rgb(65, 106, 255)" data-myThemetranspalent="rgb(235, 69, 89 , .5)"></li>
+            <li style="background-color:rgb(255, 0, 0);" data-primeColor="rgb(255, 0, 0)" data-primeColorblack="rgb(191,6,6)" data-primefontcolor="rgb(0,0,0)" data-myThemetranspalent="rgb(255, 0, 0,.5)"></li>
+            <li style="background-color:rgb(0, 0, 170);" data-primeColor="rgb(0, 0, 170)" data-primeColorblack="rgb(255,33,79)" data-primefontcolor="rgb(255,33,79)" data-myThemetranspalent="rgb(0, 0, 170,.5)"></li>
+            <li style="background-color:rgb(0, 170, 68);" data-primeColor="rgb(0, 170, 68)" data-primeColorblack="rgb(6, 126, 54)" data-primefontcolor="rgb(5,56,26)" data-myThemetranspalent="rgb(0, 170, 68,.5)"></li>
+            <li data-value="random" data-primeColorblack="" data-primeFontColor="" data-myThemetranspalent=""><i class="fas fa-random"></i></li>
+          </ul>
+
+        </div>
+
+        <img src="images/logos/path5206.png" class=" fa-x" data-toggle="collapse" data-target="#colorbox" alt="compiler">
+        <!-- <img src="images/logos/compile.jpg" class=" fa-x" data-toggle="collapse" data-target="#colorbox"> -->
+    </section>
+
+    <!-- ************************************* colors ************************************* -->
+
 
     <main role="main">
 
@@ -165,134 +323,6 @@
         </a>
       </div>
 
-      <!-- ================================= MODAL =================================  -->
-
-      <!--Modal: Login / Register Form-->
-      <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog cascading-modal" role="document">
-          <!--Content-->
-          <div class="modal-content">
-
-            <!--Modal cascading tabs-->
-            <div class="modal-c-tabs">
-
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
-                    Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
-                    Register</a>
-                </li>
-              </ul>
-
-              <!-- Tab panels -->
-              <div class="tab-content">
-                <!--Panel 7-->
-                <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-
-                  <!--Body-->
-                  <div class="modal-body mb-1">
-                    <div class="md-form form-sm mb-5">
-                      <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                      <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">@</div>
-                        </div>
-                        <input type="text" class="form-control" id="Usersign" placeholder="Username">
-                      </div>
-                    </div>
-
-                    <div class="md-form form-sm mb-4">
-                      <label class="sr-only" for="inlineFormInputGroup">password</label>
-                      <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text"><i class="fas fa-lock prefix"></i></div>
-                        </div>
-                        <input type="password" class="form-control" id="userpass" placeholder="password">
-                      </div>
-                    </div>
-                    <div class="text-center mt-2">
-                      <button class="btn btn-info">Log in <i class="fas fa-sign-in-alt ml-1"></i></button>
-                    </div>
-                  </div>
-                  <!--Footer-->
-                  <div class="modal-footer">
-                    <div class="options text-center text-md-right mt-1">
-                      <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
-                      <p>Forgot <a href="#" class="blue-text">Password?</a></p>
-                    </div>
-                    <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
-                  </div>
-
-                </div>
-                <!--/.Panel 7-->
-
-                <!--Panel 8-->
-                <div class="tab-pane fade" id="panel8" role="tabpanel">
-
-                  <!--Body-->
-                  <div class="modal-body">
-                    <div class="md-form form-sm mb-5">
-                      <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                      <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">@</div>
-                        </div>
-                        <input type="text" class="form-control" id="userreg" placeholder="Username">
-                      </div>
-                    </div>
-
-                    <div class="md-form form-sm mb-5">
-                      <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text"><i class="fas fa-lock prefix"></i></div>
-                        </div>
-                        <input type="password" class="form-control" id="passrepeat1" placeholder="password">
-                      </div>
-                    </div>
-
-                    <div class="md-form form-sm mb-4">
-                      <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text"><i class="fas fa-lock prefix"></i></div>
-                        </div>
-                        <input type="password" class="form-control" id="passrepeat2" placeholder="Repeat password">
-                      </div>
-                    </div>
-
-                    <div class="text-center form-sm mt-2">
-                      <button class="btn btn-info">Sign up <i class="fas fa-sign-in-alt ml-1"></i></button>
-                    </div>
-
-                  </div>
-                  <!--Footer-->
-                  <div class="modal-footer">
-                    <div class="options text-right">
-                      <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
-                    </div>
-                    <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-                <!--/.Panel 8-->
-              </div>
-
-            </div>
-          </div>
-          <!--/.Content-->
-        </div>
-      </div>
-      <!--Modal: Login / Register Form-->
-
-      <!-- <div class="text-center">
-        <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Launch
-          Modal LogIn/Register</a>
-      </div> -->
-
-      <!-- ================================= MODAL =================================  -->
-
       <!-- ================================= counter ================================= -->
       <div class="count-div m-0">
         <div class="container">
@@ -333,27 +363,6 @@
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
       <div class="container marketing">
-
-        <section class="option-box">
-            <div class="color-option collapse" id="colorbox" style="height: 20px">
-                choose your theme
-              <ul class="list-unstyled">
-                <li data-value="default-theme.css" ></li>
-                <li data-value="blue-theme.css"></li>
-                <li data-value="treco-theme.css"></li>
-                <li data-value="purple-theme.css"></li>
-                <li data-value="green-theme.css"></li>
-                <li data-value="black"><i class="fas fa-random"></i></li>
-
-              </ul>
-
-            </div>
-
-            <img src="images/logos/path5206.png" class=" fa-x" data-toggle="collapse" data-target="#colorbox" alt="compiler">
-            <!-- <img src="images/logos/compile.jpg" class=" fa-x" data-toggle="collapse" data-target="#colorbox"> -->
-        </section>
-
-
 
         <!-- START THE FEATURETTES -->
 
@@ -636,6 +645,7 @@
                         </ul>
                       </div><!-- /.col-lg-4 -->
                     </div>
+
                     <div class="item">
                       <div class="col text-center text-white">
                         <img src="images/team/dr.jpeg" class="rounded-circle " width="150" height="150" alt="web">
@@ -643,13 +653,14 @@
                         <p>Dr/Moahmmed Elsager</p>
                         <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
                         <ul class="social-links text-center">
-                          <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i> </a></li>
-                          <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i> </a></li>
+                          <li class=""><a href="#"> <i class="fab fa-twitter fa-3x"></i></a></li>
+                          <li class=""><a href="#"> <i class="fab fa-facebook fa-3x"></i></a></li>
                           <li class=""><a href="#"> <i class="fab fa-google-plus-g fa-3x"></i> </a></li>
                           <li class=""><a href="#"> <i class="fab fa-instagram fa-3x"></i> </a></li>
                         </ul>
                       </div><!-- /.col-lg-4 -->
                     </div>
+
                 </div>
               </div>
             </div>

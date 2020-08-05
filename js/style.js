@@ -13,61 +13,74 @@ $(document).ready(function() {
 
     // /////////////// colors ///////////////
 
-        var colorLi = $(".color-option ul li");
-        colorLi
-
-      .eq(0).css("background","rgb(0, 189, 170)").end()
-      .eq(1).css("background","rgb(235, 69, 89)").end()
-      .eq(2).css("background","rgb(255, 0, 0)").end()
-      .eq(3).css("background","rgb(0, 0, 170)").end()
-      .eq(4).css("background","rgb(0, 170, 68)").end();
-      // .eq(5).css("background","#000");
+      // var colorLi = $(".color-option ul li");
+      // colorLi
+      // .eq(0).css("background","rgb(0, 189, 170)").end()
+      // .eq(1).css("background","rgb(235, 69, 89)").end()
+      // .eq(2).css("background","rgb(255, 0, 0)").end()
+      // .eq(3).css("background","rgb(0, 0, 170)").end()
+      // .eq(4).css("background","rgb(0, 170, 68)").end();
+      // // .eq(5).css("background","#000");
 
       $(".color-option ul li").click(function()
       {
         $(':root').css({
           // '--myprimeColor': $(this).css("background-color") ,
+          '--myprimeColor': $(this).data("primecolor") ,
+          '--myprimeColorblack': $(this).data("primecolorblack") ,
+          '--primeFontColor': $(this).data("primefontcolor") ,
+          '--myThemetranspalent': $(this).data("mythemetranspalent") ,
         });
-        if( $(this).css("background-color") == "rgb(0, 189, 170)" ){
-          $(':root').css({
-            '--myprimeColor': $(this).css("background-color") ,
-            '--myprimeColorblack': "rgb(244, 0, 235)",
-            '--primeFontColor' : '#df154f',
-            '--myThemetranspalent' : "rgb(0, 189, 170 , .5)"
-          });
-        } else if( $(this).css("background-color") == "rgb(235, 69, 89)" ){
-          $(':root').css({
-            '--myprimeColor': $(this).css("background-color") ,
-            '--myprimeColorblack': "#f78259" ,
-            '--primeFontColor' : 'rgb(65, 106, 255)',
-            '--myThemetranspalent' : "rgb(235, 69, 89 , .5)"
-          });
-        } else if( $(this).css("background-color") == "rgb(255, 0, 0)" ){
-          $(':root').css({
-            '--myprimeColor': $(this).css("background-color") ,
-            '--myprimeColorblack': "rgb(191,6,6)",
-            '--primeFontColor' : "rgb(0,0,0)",
-            '--myThemetranspalent' :  "rgb(255, 0, 0,.5)"
-          });
-        } else if( $(this).css("background-color") == "rgb(0, 0, 170)" ){
-          $(':root').css({
-            '--myprimeColor': $(this).css("background-color") ,
-            '--myprimeColorblack': "rgb(6,6,115)",
-            '--primeFontColor' : "rgb(255,33,79)",
-            '--myThemetranspalent' : "rgb(0, 0, 170,.5)"
-          });
-        } else if( $(this).css("background-color") == "rgb(0, 170, 68)" ){
-          $(':root').css({
-            '--myprimeColor': $(this).css("background-color") ,
-            '--myprimeColorblack': "rgb(6, 126, 54)",
-            '--primeFontColor' : "rgb(5,56,26)",
-            '--myThemetranspalent' : "rgb(0, 170, 68,.5)"
-          });
-        } else if( $(this).data("value") == "black" ){
-          $(':root').css('--myprimeColor', (color = ["rgb(0, 189, 170)", "rgb(235, 69, 89)", "rgb(32, 64, 81)", "rgb(114, 27, 101)", "rgb(255, 164, 27)"])[Math.floor(Math.random() * color.length)]);
-          $(':root').css('--myprimeColorblack', (color = ["rgb(64, 0, 130)", "#f78259", "#3b6978", "#b80d57", "#be7d1c"])[Math.floor(Math.random() * color.length)]);
-          $(':root').css('--primeFontColor', (color = ["#df154f", "#aeefec", "#f57b51", "#c69eab", "#000839"])[Math.floor(Math.random() * color.length)]);
-            }
+        if( $(this).data("value") == "random"){
+            $(':root').css({'--myprimeColor': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
+            $(':root').css({'--myprimeColorblack': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
+            $(':root').css({'--primeFontColor': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
+            $(':root').css({'--myThemetranspalent': "rgba("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +", .5 )",});
+        }
+        // if( $(this).css("background-color") == "rgb(0, 189, 170)" ){
+        //   $(':root').css({
+        //     '--myprimeColor': $(this).css("background-color") ,
+        //     '--myprimeColorblack': "rgb(244, 0, 235)",
+        //     '--primeFontColor' : 'rgb(80, 0, 77)',
+        //     '--myThemetranspalent' : "rgb(0, 189, 170 , .5)"
+        //   });
+        // } else if( $(this).css("background-color") == "rgb(235, 69, 89)" ){
+        //   $(':root').css({
+        //     '--myprimeColor': $(this).css("background-color") ,
+        //     '--myprimeColorblack': "#f78259" ,
+        //     '--primeFontColor' : 'rgb(65, 106, 255)',
+        //     '--myThemetranspalent' : "rgb(235, 69, 89 , .5)"
+        //   });
+        // } else if( $(this).css("background-color") == "rgb(255, 0, 0)" ){
+        //   $(':root').css({
+        //     '--myprimeColor': $(this).css("background-color") ,
+        //     '--myprimeColorblack': "rgb(191,6,6)",
+        //     '--primeFontColor' : "rgb(0,0,0)",
+        //     '--myThemetranspalent' :  "rgb(255, 0, 0,.5)"
+        //   });
+        // } else if( $(this).css("background-color") == "rgb(0, 0, 170)" ){
+        //   $(':root').css({
+        //     '--myprimeColor': $(this).css("background-color") ,
+        //     '--myprimeColorblack': "rgb(6,6,115)",
+        //     '--primeFontColor' : "rgb(255,33,79)",
+        //     '--myThemetranspalent' : "rgb(0, 0, 170,.5)"
+        //   });
+        // } else if( $(this).css("background-color") == "rgb(0, 170, 68)" ){
+        //   $(':root').css({
+        //     '--myprimeColor': $(this).css("background-color") ,
+        //     '--myprimeColorblack': "rgb(6, 126, 54)",
+        //     '--primeFontColor' : "rgb(5,56,26)",
+        //     '--myThemetranspalent' : "rgb(0, 170, 68,.5)"
+        //   });
+        // } else if( $(this).data("value") == "random" ){
+        //   // $(':root').css('--myprimeColor', (color = ["rgb(0, 189, 170)", "rgb(235, 69, 89)", "rgb(32, 64, 81)", "rgb(114, 27, 101)", "rgb(255, 164, 27)"])[Math.floor(Math.random() * color.length)]);
+        //   // $(':root').css('--myprimeColorblack', (color = ["rgb(64, 0, 130)", "#f78259", "#3b6978", "#b80d57", "#be7d1c"])[Math.floor(Math.random() * color.length)]);
+        //   // $(':root').css('--primeFontColor', (color = ["#df154f", "#aeefec", "#f57b51", "#c69eab", "#000839"])[Math.floor(Math.random() * color.length)]);
+        //   $(':root').css({'--myprimeColor': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
+        //   $(':root').css({'--myprimeColorblack': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
+        //   $(':root').css({'--primeFontColor': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
+        //   $(':root').css({'--myThemetranspalent': "rgba("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +" "+ getRandomInteger(0,1) +")",});
+        //   }
       });
 
     // /////////////// colors ///////////////
@@ -213,6 +226,15 @@ $(document).ready(function() {
 
 });
 
+// **************************************** get random number in range ****************************************
+    function getRandomInteger(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+// **************************************** get random number in range ****************************************
+
+
 // ****************************** function to darken the colors so imporstant ******************************
 // function ColorLuminance(hex, lum) {
 //     // validate hex string
@@ -258,3 +280,16 @@ $(document).ready(function() {
 //         scrollTop: 0
 //     }, 9000);
 // });
+
+//  ****************************** color rgb to rgba code ******************************
+// $(this).css('background-color').replace(')', ', 0.75)').replace('rgb', 'rgba');
+// $new = $('.count-div').css('background-color').replace(')', ', 0.75)').replace('rgb', 'rgba'); $('.count-div').css('background-color' , $new);
+// ********************************* get random number *********************************
+
+// function getRandomInteger(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min)) + min;
+// }
+
+// ********************************* get random number *********************************
