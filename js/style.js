@@ -1,3 +1,12 @@
+var colors = [] , savedcolors = [] ;
+ savedcolors = JSON.parse(localStorage.getItem("col")) ||
+ [
+   $(this).data("primecolor") ,
+   $(this).data("primecolorblack") ,
+   $(this).data("primefontcolor") ,
+   $(this).data("mythemetranspalent")
+ ] ;
+
 $(document).ready(function() {
    $(window).scroll(function(){
         if($(window).scrollTop() > $(window).height() / 4){
@@ -22,15 +31,33 @@ $(document).ready(function() {
       // .eq(4).css("background","rgb(0, 170, 68)").end();
       // // .eq(5).css("background","#000");
 
+      $(':root').css({
+        // '--myprimeColor': $(this).css("background-color") ,
+        '--myprimeColor': savedcolors[0] ,
+        '--myprimeColorblack':savedcolors[1] ,
+        '--primeFontColor': savedcolors[2] ,
+        '--myThemetranspalent': savedcolors[3],
+      });
+
       $(".color-option ul li").click(function()
       {
+        colors = [
+          $(this).data("primecolor") ,
+          $(this).data("primecolorblack") ,
+          $(this).data("primefontcolor") ,
+          $(this).data("mythemetranspalent")
+        ];
         $(':root').css({
           // '--myprimeColor': $(this).css("background-color") ,
           '--myprimeColor': $(this).data("primecolor") ,
-          '--myprimeColorblack': $(this).data("primecolorblack") ,
+          '--myprimeColorblack':$(this).data("primecolorblack") ,
           '--primeFontColor': $(this).data("primefontcolor") ,
-          '--myThemetranspalent': $(this).data("mythemetranspalent") ,
+          '--myThemetranspalent':   $(this).data("mythemetranspalent")
         });
+        // loocal storage
+        localStorage.setItem("col", JSON.stringify(colors));
+        savedcolors = JSON.parse(localStorage.getItem("col"));
+        // loocal storage
         if( $(this).data("value") == "random"){
             $(':root').css({'--myprimeColor': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
             $(':root').css({'--myprimeColorblack': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
