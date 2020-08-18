@@ -44,6 +44,10 @@
   --myThemetranspalent : rgba(0, 189, 170 , .5);
 }
 
+a{
+  cursor: pointer !important;
+}
+
 .navbar-light .navbar-brand{
   color: var(--myprimeColorblack);
 }
@@ -60,6 +64,10 @@
 
 .navbar-light .navbar-nav .nav-link{
   color: var(--myprimeColorblack);
+}
+
+.navbar-nav .nav-link{
+  cursor: pointer
 }
 
 .dropdown-item:hover{
@@ -98,7 +106,7 @@
 }
 
 .option-box{
-  top:269px;
+  top:25%;
 }
 
 .option-box-2{
@@ -132,6 +140,10 @@
   background-color: var(--myprimeColor);
 }
 
+li[data-value="random"]{
+  font-size: 24px;
+}
+
 .myprime{
   border: 1px solid var(--myprimeColor);
   transition: .3s all ease-in-out;
@@ -143,6 +155,17 @@
   color: white !important;
 }
 
+.myprime-reverse{
+  background-color: var(--myprimeColor);
+  transition: .3s all ease-in-out;
+  color: var(--white) !important;
+}
+
+.myprime-reverse:hover{
+  background: rgba(0,0,0,0);
+  border: 1px solid var(--myprimeColor);
+  color: white !important;
+}
 .social-links{
   list-style-type: none;
   font-size: 9px;
@@ -445,3 +468,24 @@
   color: #e5e5e5;
 }
 /* ============================================= products ============================================= */
+
+.regform{
+  background: var(--myThemetranspalent);    /* color */
+}
+
+.regform-bg {
+  margin-top: 100px;
+}
+
+.prime-link{
+  color: var(--myprimeColorblack)
+}
+
+.prime-link:hover{
+  color: var(--myprimeColor) !important;
+  text-decoration: none;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}

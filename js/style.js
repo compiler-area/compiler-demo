@@ -1,10 +1,17 @@
-var colors = [] , savedcolors = [] ;
+var colors = [] , savedcolors = []  , rootcss = [];
  savedcolors = JSON.parse(localStorage.getItem("col")) ||
  [
-   $(this).data("primecolor") ,
-   $(this).data("primecolorblack") ,
-   $(this).data("primefontcolor") ,
-   $(this).data("mythemetranspalent")
+   rgb(0, 189, 170) ,
+   rgb(244, 0, 235) ,
+   rgb(80, 0, 77),
+   rgba(0, 189, 170 , .5)
+ ] ;
+ rootcss = JSON.parse(localStorage.getItem("rootcol")) ||
+ [
+   rgb(0, 189, 170) ,
+   rgb(244, 0, 235) ,
+   rgb(80, 0, 77),
+   rgba(0, 189, 170 , .5)
  ] ;
 
 $(document).ready(function() {
@@ -20,6 +27,14 @@ $(document).ready(function() {
         }
     });
 
+    $('a[data-open="form"]').click(function () {
+      // window.open("form.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=500,width=400,height=400");
+      window.open($(this).data("to"), "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=400,width=600,height=600");
+      console.log($(this).data("to"));
+    })
+    $(".regform-bg").parent().css("background","url('images/form/hacker.jpg')  center center / 100% 100%  no-repeat fixed padding-box content-box")
+
+
     // /////////////// colors ///////////////
 
       // var colorLi = $(".color-option ul li");
@@ -33,20 +48,14 @@ $(document).ready(function() {
 
       $(':root').css({
         // '--myprimeColor': $(this).css("background-color") ,
-        '--myprimeColor': savedcolors[0] ,
-        '--myprimeColorblack':savedcolors[1] ,
-        '--primeFontColor': savedcolors[2] ,
-        '--myThemetranspalent': savedcolors[3],
+        '--myprimeColor': rootcss[0] ,
+        '--myprimeColorblack':rootcss[1] ,
+        '--primeFontColor': rootcss[2] ,
+        '--myThemetranspalent': rootcss[3],
       });
 
       $(".color-option ul li").click(function()
       {
-        colors = [
-          $(this).data("primecolor") ,
-          $(this).data("primecolorblack") ,
-          $(this).data("primefontcolor") ,
-          $(this).data("mythemetranspalent")
-        ];
         $(':root').css({
           // '--myprimeColor': $(this).css("background-color") ,
           '--myprimeColor': $(this).data("primecolor") ,
@@ -54,16 +63,36 @@ $(document).ready(function() {
           '--primeFontColor': $(this).data("primefontcolor") ,
           '--myThemetranspalent':   $(this).data("mythemetranspalent")
         });
-        // loocal storage
-        localStorage.setItem("col", JSON.stringify(colors));
-        savedcolors = JSON.parse(localStorage.getItem("col"));
-        // loocal storage
+
         if( $(this).data("value") == "random"){
             $(':root').css({'--myprimeColor': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
             $(':root').css({'--myprimeColorblack': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
             $(':root').css({'--primeFontColor': "rgb("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +")",});
             $(':root').css({'--myThemetranspalent': "rgba("+ getRandomInteger(0,255) +" , " + getRandomInteger(0,255) + ", "+ getRandomInteger(0,255) +", .5 )",});
         }
+        colors = [
+          $(this).data("primecolor") ,
+          $(this).data("primecolorblack") ,
+          $(this).data("primefontcolor") ,
+          $(this).data("mythemetranspalent")
+        ];
+        rootColors = [
+          $(':root').css('--myprimeColor'),
+          $(':root').css('--myprimeColorblack'),
+          $(':root').css('--primeFontColor'),
+          $(':root').css('--myThemetranspalent'),
+        ];
+
+        // loocal storage
+        localStorage.setItem("col", JSON.stringify(colors));
+        savedcolors = JSON.parse(localStorage.getItem("col"));
+        // loocal storage
+
+        // loocal storage
+        localStorage.setItem("rootcol", JSON.stringify(rootColors));
+        savedcolors = JSON.parse(localStorage.getItem("rootcol"));
+        // loocal storage
+
         // if( $(this).css("background-color") == "rgb(0, 189, 170)" ){
         //   $(':root').css({
         //     '--myprimeColor': $(this).css("background-color") ,
@@ -250,6 +279,7 @@ $(document).ready(function() {
             // // }
         }
     })
+
 
 });
 
