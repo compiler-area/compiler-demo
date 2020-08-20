@@ -32,6 +32,11 @@ $(document).ready(function() {
       window.open($(this).data("to"), "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=400,width=600,height=600");
       console.log($(this).data("to"));
     })
+    $('a[data-open="contact"]').click(function () {
+      // window.open("form.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=500,width=400,height=400");
+      window.open($(this).data("to"), "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=400,width=600,height=600");
+      console.log($(this).data("to"));
+    })
     $(".regform-bg").parent().css("background","url('images/form/hacker.jpg')  center center / 100% 100%  no-repeat fixed padding-box content-box")
 
 

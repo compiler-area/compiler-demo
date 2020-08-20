@@ -106,7 +106,7 @@ a{
 }
 
 .option-box{
-  top:25%;
+  top:40%;
 }
 
 .option-box-2{
@@ -488,4 +488,9 @@ li[data-value="random"]{
 
 .bg-dark {
   background-color: #343a40 !important;
+}
+
+textarea:focus{
+  border: none;
+  outline: none
 }

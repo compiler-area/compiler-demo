@@ -131,139 +131,72 @@
         <!-- Default form login -->
         <form class="text-left text-white border border-dark p-5 " action="#!">
 
-            <p class="h4 mb-4 text-center">Sign in</p>
+            <p class="h4 mb-4 text-center fa-2x ">contact Us <i class="fab fa-rocketchat  d-inline-block"></i> </p>
 
-            <!-- Email -->
-            <input required type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+            <!-- ****************************************************************** -->
+            <div class="row">
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-12">
+                      <label class="sr-only" for="inlineFormInputGroup">your name</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-user"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="user" placeholder="your name">
+                      </div>
+                  </div>
 
-            <!-- Password -->
-            <input required type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+                  <div class="col-12">
+                      <label class="sr-only" for="inlineFormInputGroup">your email</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-envelope"></i></div>
+                        </div>
+                        <input type="email" class="form-control" id="email" placeholder="your email">
+                      </div>
+                  </div>
 
-            <div class="d-flex justify-content-left">
-                <!-- <div>
-                    <div class="custom-control custom-checkbox">
-                        <input required type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                        <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-                    </div>
-                </div> -->
-                <div class="mb-4 text-left">
-                  <!-- Remember me -->
-                    <div class="custom-control custom-switch d-inline mr-2">
-                        <input required type="checkbox" class="custom-control-input" id="customSwitch1">
-                        <label class="custom-control-label" for="customSwitch1">Remember me</label>
-                    </div>
-                    <!-- Forgot password -->
-                    <a class="prime-link text-white" id="forget">Forgot password?</a>
+                  <div class="col-12">
+                      <label class="sr-only" for="inlineFormInputGroup">subject</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-address-book"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="subject" placeholder="subject">
+                      </div>
+                  </div>
                 </div>
+              </div>
+
+              <div class="col-6">
+                <div class="row">
+                  <div class="col">
+                    <textarea name="message" rows="5" class="mb-2" style="padding:10px;width:100%;border-radius:22px" placeholder="the body of the subject....."></textarea>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- ****************************************************************** -->
 
             <!-- Sign in button -->
-            <button class="btn myprime btn-lg btn-block" type="submit">Sign in</button>
-
-            <!-- Register -->
-            <p class="mt-2">Not a member?
-                <a  class="btn myprime togler">Register</a>
-            </p>
-
+            <button class="btn myprime btn-lg btn-block" type="submit">Send</button>
             <!-- Social login -->
+
             <div class="Social-login text-center">
-                <p>or sign in with:</p>
+                <p>or contact us with in with:</p>
 
                 <ul class="social-links">
-                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-facebook-f fa-2x"></i></a></li>
-                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-twitter fa-2x"></i></a></li>
-                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
-                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-github fa-2x"></i></a></li>
+                  <li><a href="https://www.facebook.com/messages/t/108691070922226" class="mx-2 p-4" role="button"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                  <li><a href="mailto:comiler.team@gmail.com" class="mx-2 p-4" role="button"><i class="fas fa-envelope fa-2x"></i></a></li>
+                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-whatsapp fa-2x"></i></a></li>
+                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-telegram fa-2x"></i></a></li>
                 </ul>
             </div>
 
 
         </form>
         <!-- Default form login -->
-      </div>
-
-      <!-- ************************************************************************** -->
-
-      <div class="regform">
-        <!-- Default form sign up -->
-        <form class="text-left text-white border border-danger p-5 " action="#!">
-
-            <p class="h4 mb-4 text-center">Sign up</p>
-
-            <div class="row mb-4">
-                <div class="col">
-                  <input required type="text" class="form-control" placeholder="First name">
-                </div>
-                <div class="col">
-                  <input required type="text" class="form-control" placeholder="Last name">
-                </div>
-            </div>
-
-            <!-- Email -->
-            <input required type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-            <!-- profile image -->
-            <div class="custom-file mb-3">
-              <input required type="file" class="custom-file-input" id="validatedCustomFile" required>
-              <label class="custom-file-label" for="validatedCustomFile">Choose progile photo...</label>
-              <div class="invalid-feedback">Example invalid custom file feedback</div>
-            </div>
-
-            <!-- Password -->
-            <div class="row mb-4">
-                <div class="col">
-                  <input required type="password" id="defaultLoginFormPassword" class="form-control" placeholder="Password" >
-                </div>
-                <div class="col">
-                  <input required type="password" id="defaultLoginFormPassword" class="form-control" placeholder="Repeat Password">
-                </div>
-            </div>
-
-            <!-- Sign in button -->
-            <button class="btn myprime btn-lg btn-block" type="submit">Sign up</button>
-
-            <!-- Register -->
-            <p class="mt-2">already member
-                <a  class="btn myprime togler">sign in</a>
-            </p>
-
-            <!-- Social login -->
-            <div class="Social-login text-center">
-                <p>or sign in with:</p>
-
-                <ul class="social-links">
-                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-facebook-f fa-2x"></i></a></li>
-                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-twitter fa-2x"></i></a></li>
-                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
-                  <li><a href="#" class="mx-2 p-4" role="button"><i class="fab fa-github fa-2x"></i></a></li>
-                </ul>
-            </div>
-
-
-        </form>
-        <!-- Default form sign up -->
-      </div>
-
-      <!-- ************************************************************************** -->
-
-      <div class="regform forget-password">
-        <!-- Default form sign up -->
-        <form class="text-left text-white border border-danger p-5 " action="#!">
-
-          <h2 class="timer count-title count-number" data-to="200" data-speed="10000">200</h2>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Enter the code we sent" aria-label="Enter the code we sent" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn myprime-reverse" type="button" id="button-addon2">this is all</button>
-            </div>
-          </div>
-
-          <!-- Register -->
-          <p class="mt-2">already member
-              <a  class="btn myprime" id="ret-sign">return to sign in</a>
-          </p>
-        </form>
-        <!-- Default form sign up -->
       </div>
 
     </div>
