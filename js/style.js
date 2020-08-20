@@ -1,18 +1,24 @@
 var colors = [] , savedcolors = []  , rootcss = [];
  savedcolors = JSON.parse(localStorage.getItem("col")) ||
  [
-   rgb(0, 189, 170) ,
-   rgb(244, 0, 235) ,
-   rgb(80, 0, 77),
-   rgba(0, 189, 170 , .5)
+   "rgb(0, 189, 170)" ,
+   "rgb(244, 0, 235)" ,
+   "rgb(80, 0, 77)" ,
+   "rgba(0, 189, 170 , .5)"
  ] ;
  rootcss = JSON.parse(localStorage.getItem("rootcol")) ||
  [
-   rgb(0, 189, 170) ,
-   rgb(244, 0, 235) ,
-   rgb(80, 0, 77),
-   rgba(0, 189, 170 , .5)
- ] ;
+  "rgb(0, 189, 170)" ,
+  "rgb(244, 0, 235)" ,
+  "rgb(80, 0, 77)" ,
+  "rgba(0, 189, 170 , .5)"
+] ;
+ var emojis = [0x1F600, 0x1F604, 0x1F34A, 0x1F344, 0x1F37F, 0x1F363, 0x1F370, 0x1F355,
+           0x1F354, 0x1F35F, 0x1F6C0, 0x1F48E, 0x1F5FA, 0x23F0, 0x1F579, 0x1F4DA,
+           0x1F431, 0x1F42A, 0x1F439, 0x1F424];
+
+// document.body.innerText = String.fromCodePoint(0x1F354); //emojis code
+
 
 $(document).ready(function() {
    $(window).scroll(function(){
@@ -37,7 +43,7 @@ $(document).ready(function() {
       window.open($(this).data("to"), "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=400,width=600,height=600");
       console.log($(this).data("to"));
     })
-    $(".regform-bg").parent().css("background","url('images/form/hacker.jpg')  center center / 100% 100%  no-repeat fixed padding-box content-box")
+    $(".regform-bg").parent().css("background","url('images/form/hacker.jpg')  center center / 100% 100%  no-repeat fixed padding-box content-box");
 
 
     // /////////////// colors ///////////////
